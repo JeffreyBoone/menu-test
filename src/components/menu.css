@@ -1,0 +1,65 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+:root {
+    --main-bg-color: lightgray;
+    --secundary-bg-color: #e3a3a3;
+  }
+
+.col {
+    min-width: 175px;
+    text-align: center;
+}
+
+#textblack
+{
+    font-size: 13px;
+    color:black;
+}
+
+@media screen and (max-width: 350px) {
+    .col:nth-child(odd) {
+        background-color:var(--main-bg-color);
+    }
+    
+    .col:nth-child(even) {
+        background-color:var(--secundary-bg-color);
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 524px) {
+    #white {
+        background-color:var(--secundary-bg-color);
+    }
+    
+    #gray {
+        background-color:var(--main-bg-color);
+           }
+}
+
+@media screen and (min-width: 525px) and (max-width: 699px){
+    .col:nth-child(odd) {
+        background-color:var(--main-bg-color);
+        max-width: 34%;
+    }
+
+    .col:nth-child(even) {
+        background-color:var(--secundary-bg-color);
+        max-width: 34%
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .col:nth-child(odd) {
+        background-color:var(--main-bg-color);
+        min-width: 33%;
+    }
+    
+    .col:nth-child(even) {
+        background-color:var(--secundary-bg-color);
+        min-width: 33%;
+    }
+}
+

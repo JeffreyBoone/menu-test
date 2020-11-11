@@ -4,7 +4,7 @@ import {
   CardTitle, CardSubtitle
 } from 'reactstrap';
 import {list} from "../props";
-import './menu.css';
+import './tile.css';
 
 function goto() {
 

@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import Menu from './components/Menu';
-import Tile from './components/Tile';
+import Menu from './components/Menu';
+// import Tile from './components/Tile';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-        {/* <Menu /> */}
-        <Tile />
+        <Menu />
+        {/* <Tile /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

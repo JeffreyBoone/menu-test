@@ -14,7 +14,7 @@ export default class ToggleApp extends React.Component {
 
     // de functie triggered correct in de f12 van chrome, met 2 active en 4 nonactive zoals in de database 
     // dus hij krijgt "index" wel goed mee maar niet als ik op de knop klik dan gebeurt er niks in het console   
-    
+    // gebaseerd op https://stackoverflow.com/a/44696148
     // de fout zit waarschijnlijk in de onclick hoe ik de l.class meegeef of de return
     toggleClass(index) {
         console.log(index)

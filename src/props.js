@@ -5,10 +5,10 @@ import image4 from '../src/4.png';
 import image5 from '../src/5.png';
 
 export const list = [
-  {active:"true", color: "c1", image: [image1], title: 'Handboek - LIOR', desc: 'Handboek Openbare Ruimte'},
-  {active:"false", color: "c2", image: [image2], title: "PvE Projecten", desc: "Programma van Eisen"},
-  {active:"false", color: "c2", image: [image3], title: 'Bijlagen', desc: 'Raadplegen van Bijlagen'},
-  {active:"false", color: "c1", image: [image4], title: 'Bronverwijzingen', desc: 'Raadplegen van Bronverwijzingen'},
-  {active:"false", color: "c1", image: [image5], title: 'Accounts en Rechten', desc: 'Gebruikersadministratie'},
-  {active:"false", color: "c2", image: [image5], title: 'Extra', desc: 'Gebruikersadministratie'},
+  { id:"0", class: "active", color: "c1", title: 'Handboek - LIOR', desc: 'Handboek Openbare Ruimte' },
+  { id:"1", class: "active", color: "c2", title: "PvE Projecten", desc: "Programma van Eisen" },
+  { id:"2", class: "", color: "c2", title: 'Bijlagen', desc: 'Raadplegen van Bijlagen' },
+  { id:"3", class: "", color: "c1", title: 'Bronverwijzingen', desc: 'Raadplegen van Bronverwijzingen' },
+  { id:"4", class: "", color: "c1", title: 'Accounts en Rechten', desc: 'Gebruikersadministratie' },
+  { id:"5", class: "", color: "c2", title: 'Extra', desc: 'Gebruikersadministratie' },
 ]

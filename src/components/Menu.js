@@ -1,39 +1,38 @@
 import React, { Component } from 'react'
-import { Button , ListGroupItem ,ListGroup } from "reactstrap"
+import { Button ,ListGroup } from "reactstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './menu.css';
+import {list} from "../props";
 
-export const list = [
-  { id:"0", class: "active", color: "c1", title: 'Handboek - LIOR', desc: 'Handboek Openbare Ruimte' },
-  { id:"1", class: "active", color: "c2", title: "PvE Projecten", desc: "Programma van Eisen" },
-  { id:"2", class: "", color: "c2", title: 'Bijlagen', desc: 'Raadplegen van Bijlagen' },
-  { id:"3", class: "", color: "c1", title: 'Bronverwijzingen', desc: 'Raadplegen van Bronverwijzingen' },
-  { id:"4", class: "disabled", color: "c1", title: 'Accounts en Rechten', desc: 'Gebruikersadministratie' },
-  { id:"5", class: "hidden", color: "c2", title: 'Extra', desc: 'Gebruikersadministratie' },
-]
+export default class ToggleApp extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        }
+        this.toggleClass = this.toggleClass.bind(this);
+    }
 
-const Menu = () => {
+    toggleClass(index) {
+        console.log(index)
+        if (index.class === "active") {
+            return index.class === ""
+        } else if (index.class === "") { return index.class === "active" };
+    }
 
-  function toggleClass(index) {
-    // if (list[index.id].class === "active") {
-    //   return list[index.id].class === ""
-    // } else if(list[index.id].class === "") { return list[index.id].class === "active"};
-  };
-
-  return (
-    <div>
-      <ListGroup>
-        {list.map((l) =>
-          <ListGroupItem color="primary" className={l.class} onClick={toggleClass({l})}>{l.title}</ListGroupItem>
-        )}      </ListGroup>
-        <br/>
-      <ListGroup>
-        {list.map((l) =>
-          <ListGroupItem color="primary" className={l.class}>{l.title}</ListGroupItem>
-        )}
-      </ListGroup>
-    </div>
-  );
+    render() {
+        return (
+            <div>
+                <ListGroup>
+                    {list.map((l) =>
+                        <Button key={l.id} color="primary" className={l.class} onClick={this.toggleClass(l)}>test</Button>
+                    )}      </ListGroup>
+                <br />
+                <ListGroup>
+                    {list.map((l) =>
+                        <Button key={l.id} color="primary" className={l.class}>{l.title}</Button>
+                    )}
+                </ListGroup>
+            </div>
+        )
+    }
 }
-
-export default Menu;

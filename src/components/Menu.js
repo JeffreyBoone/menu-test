@@ -12,11 +12,16 @@ export default class ToggleApp extends React.Component {
         this.toggleClass = this.toggleClass.bind(this);
     }
 
+    // de functie triggered correct in de f12 van chrome, met 2 active en 4 nonactive zoals in de database 
+    // dus hij krijgt "index" wel goed mee maar niet als ik op de knop klik dan gebeurt er niks in het console   
+    
+    // de fout zit waarschijnlijk in de onclick hoe ik de l.class meegeef of de return
     toggleClass(index) {
         console.log(index)
-        if (index.class === "active") {
-            return index.class === ""
-        } else if (index.class === "") { return index.class === "active" };
+        if (index === "active") {
+            return index === ""
+        } else if (index === "") { 
+          return index === "active" };
     }
 
     render() {
@@ -24,7 +29,7 @@ export default class ToggleApp extends React.Component {
             <div>
                 <ListGroup>
                     {list.map((l) =>
-                        <Button key={l.id} color="primary" className={l.class} onClick={this.toggleClass(l)}>test</Button>
+                        <Button key={l.id} color="primary" className={l.class} onClick={this.toggleClass(l.class)}>test</Button>
                     )}      </ListGroup>
                 <br />
                 <ListGroup>
